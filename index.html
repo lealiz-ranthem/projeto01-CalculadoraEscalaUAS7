@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <title>Calculadora UAS-7</title>
+</head>
+<body>
+    <main class="container">      
+        <h1>Escala UAS-7</h1>
+        <div class="botoes">
+            <button class="botao-cards" onclick="mostrarSecao('cards-uce')">Sobre a UCE</button>
+            <button class="botao-cards" onclick="mostrarSecao('cards-escala')">A Escala UAS-7</button>
+        </div>
+            <div id="cards-uce" class="secao-cards">
+                    <p class="card">A <b>urticária crônica espontânea</b> (UCE) é uma condição caracterizada pelo aparecimento de placas avermelhadas e elevadas na pele (vergôes), geralmente acompanhadas de coceira intensa, que duram mais de seis semanas. As lesões podem surgir em qualquer parte do corpo, mudar de lugar ao longo do dia, e desaparecer em até 24 horas, reaparecendo depois. Em alguns casos, pode ocorrer também inchaço mais profundo, chamado angioedema.
+                    É chamada de espontânea pois não há gatilho externo claro e identificável, como alimento, medicamento ou contato específico. Na maioria das vezes, está relacionada a uma alteração do próprio sistema imunológico, que libera substâncias como a histamina de forma exagerada. Apesar de incomodar bastante, não é contagiosa e raramente representa risco grave à vida.O tratamento costuma envolver o uso de anti-histamínicos, podendo ser necessário ajustar doses ou associar outros medicamentos em casos mais resistentes. O acompanhamento médico é importante para descartar outras causas e orientar a melhor conduta. Embora possa durar meses ou anos, muitas pessoas apresentam melhora gradual ao longo do tempo. </p>
+                </div>
+                <div id="cards-escala" class="secao-cards">
+                    <p class="card">A <b>UAS-7 (Urticaria Activity Score - 7 dias)</b> é uma escala usada para avaliar a intensidade da urticária ao longo de uma semana. Todos os dias, a pessoa atribui uma pontuação de 0 a 3 pontos para dois critérios: número de lesões (vergões) e intensidade da coceira. A soma diária pode variar de 0 a 6, e ao final de sete dias calcula-se o total, que pode chegar a 42 pontos.
+                    Quanto maior a pontuação, mais ativa está a doença. Em geral, 0 indica ausência de atividade, de 01 a 06 a atividade é considerada leve, 07 a 15, moderada, 16 a 27, de moderada a intensa,e acima de 28, intensa. A UAS-7 auxilia o profissional médico no acompanhamento da evolução do quadro a fim de avaliar a eficiência do tratamento.</p>
+                </div>
+        <h2>UAS7 - Acompanhamento Diário</h2>
+        <p>Como você se sentiu hoje?</p>
+        <fieldset id="fieldset-dia-1" class="caixa-dias">
+            <legend>Dia 01</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-1" id="data-dia-1">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-1">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-1" id="lesoes-dia-1">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-1" id="prurido-dia-1">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-1">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-2">
+            <legend>Dia 02</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-2" id="data-dia-2">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-2">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-2" id="lesoes-dia-2">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-2" id="prurido-dia-2">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-2">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-3">
+            <legend>Dia 03</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-3" id="data-dia-3">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-3">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-3" id="lesoes-dia-3">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-3" id="prurido-dia-3">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-3">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-4">
+            <legend>Dia 04</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-4" id="data-dia-4">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-4">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-4" id="lesoes-dia-4">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-4" id="prurido-dia-4">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-4">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-5">
+            <legend>Dia 05</legend>
+            <label for="lesoes-dia-5">Data</label>
+                <input type="date" name="data-dia-5" id="data-dia-5">
+                <p class="aviso-data hidden" id="aviso-dia-5">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                Lesões
+            </label>
+                <select name="lesoes-dia-5" id="lesoes-dia-5">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-5" id="prurido-dia-5">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-5">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-6">
+            <legend>Dia 06</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-6" id="data-dia-6">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-6">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-6" id="lesoes-dia-6">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-6" id="prurido-dia-6">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-6">-</output>
+            </p>
+        </fieldset>
+        <fieldset class="hidden" id="fieldset-dia-7">
+            <legend>Dia 07</legend>
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="data-dia-7" id="data-dia-7">
+            </label>
+                <p class="aviso-data hidden" id="aviso-dia-7">
+                    Você pulou um dia. O resultado pode ficar impreciso.
+                </p>
+            <label>
+                <h4>Lesões</h4>
+                <select name="lesoes-dia-7" id="lesoes-dia-7">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhuma</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <label>
+                <h4>Prurido</h4>
+                <select name="prurido-dia-7" id="prurido-dia-7">
+                    <option value="" selected disabled>
+                        Selecione uma opção
+                    </option>
+                    <option value="0">0 - Nenhum</option>
+                    <option value="1">1 - Leve</option>
+                    <option value="2">2 - Moderado</option>
+                    <option value="3">3 - Grave</option>
+                </select>
+            </label>
+            <p class="score hidden">
+                Score do dia:
+                <output id="score-dia-7">-</output>
+            </p>
+        </fieldset>
+        <fieldset id="botao-resultado">
+            <button type="button" id="resultado" disabled>Resultado</button>
+        </fieldset>
+        <div id="uas7-final" class="hidden">
+            <h3>UAS-7 Final</h3>
+            <p id="valor-uas7-final"></p>
+            <p id="classificacao-uas7"></p>
+        </div>
+        <footer>Criado por Lealiz Ranthem</footer>
+        
+        <script src="script.js"></script>
+    </main>        
+</body>
+</html>
