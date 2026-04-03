@@ -16,3 +16,6 @@ Cabe ressaltar que este projeto não tem finalildade diagnóstica e não substit
 - Preocupação com acessibilidade e UX
 - Organização e clareza de código
 - Validação de dados no front-end
+
+Demo: https://lealiz-ranthem.github.io/projeto01-CalculadoraEscalaUAS7/
+
